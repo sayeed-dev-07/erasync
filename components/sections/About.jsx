@@ -68,7 +68,7 @@ const About = () => {
 
     return (
         <section ref={containerRef} id="about" className="relative w-full bg-background text-foreground pt-24 pb-32 sm:pt-32 sm:pb-40 px-4 sm:px-8 md:px-12 selection:bg-secondary selection:text-white">
-            <div className="w-full max-w-7xl mx-auto flex flex-col gap-y-32 md:gap-y-48">
+            <div className="w-full max-w-[1600px] mx-auto flex flex-col gap-y-32 md:gap-y-48">
 
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 relative">
@@ -138,7 +138,7 @@ const About = () => {
                         {/* Client Logos Grid */}
                         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 sm:gap-6">
                             {data.sections[1].logos.map((logo, index) => (
-                                <div key={index} className="fade-up-logo  relative w-full h-24 sm:h-32 flex items-center justify-center border border-foreground/10 rounded-2xl sm:rounded-3xl  bg-white  overflow-hidden">
+                                <div key={index} className="fade-up-logo  relative w-full h-24 sm:h-32 flex items-center justify-center border border-foreground/10   bg-white  overflow-hidden">
                                     <Image
                                         src={logo.src}
                                         alt={logo.alt}

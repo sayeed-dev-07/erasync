@@ -1,6 +1,9 @@
 import Navbar from '@/components/normal/Navbar';
 import About from '@/components/sections/About';
 import Hero from '@/components/sections/Hero';
+import Services from '@/components/sections/Services';
+import Testimonials from '@/components/sections/Testimonials';
+import Works from '@/components/sections/Work';
 import React from 'react';
 
 const page = () => {
@@ -9,7 +12,9 @@ const page = () => {
       <Navbar />
       <Hero />
       <About />
-      <div className='min-h-screen'></div>
+      <Works />
+      <Services />
+      <Testimonials />
     </div>
   );
 };

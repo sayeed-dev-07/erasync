@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { HeroData } from '@/public/data/HeroData';
-import MagneticButton from '../global/MagneticButton';
+
 
 gsap.registerPlugin(useGSAP);
 gsap.config({ force3D: true });
@@ -80,10 +80,6 @@ const Hero = () => {
                 </span>
 
             </Link>
-
-
-
-
 
 
             <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center justify-center z-10 pointer-events-none">

@@ -18,6 +18,12 @@ const nextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'erasync.us',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
