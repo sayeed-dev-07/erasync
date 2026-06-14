@@ -43,7 +43,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="relative w-full h-screen min-h-[700px] bg-foreground text-background overflow-hidden flex items-center justify-center font-outfit uppercase selection:bg-background selection:text-foreground"
+            className="relative w-full h-svh min-h-[700px] bg-foreground text-background overflow-hidden flex items-center justify-center font-outfit uppercase selection:bg-background selection:text-foreground"
         >
 
             <div className="editorial-corner absolute top-28 sm:top-32 left-6 sm:left-12 z-20 text-xs sm:text-sm font-semibold tracking-[0.2em] opacity-0">
@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
 
 
-            <div className="editorial-corner absolute top-40 sm:top-32 right-6 sm:right-12 z-20 w-48 sm:w-64 text-xs sm:text-sm font-medium tracking-wide leading-relaxed text-right opacity-0 ">
+            <div className="editorial-corner absolute top-36 sm:top-32 right-6 sm:right-12 z-20 w-48 sm:w-64 text-xs sm:text-sm font-medium tracking-wide leading-relaxed text-right opacity-0 ">
                 <p className="text-background/80">{data.description}</p>
             </div>
 
