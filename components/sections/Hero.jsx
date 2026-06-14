@@ -18,8 +18,7 @@ const Hero = () => {
     useGSAP(() => {
         const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
 
-        tl.fromTo(imageRef.current,
-            { clipPath: 'polygon(0% 49.5%, 100% 49.5%, 100% 50.5%, 0% 50.5%)' },
+        tl.to(imageRef.current,
             { clipPath: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)', duration: 1.5, delay: 0.2 }
         )
             .fromTo('.heading-top',
@@ -100,6 +99,7 @@ const Hero = () => {
                 <div
                     ref={imageRef}
                     className="relative z-20 w-[85%] sm:w-[70%] md:w-[50%]  aspect-video border border-foreground/20 pointer-events-auto"
+                    style={{ clipPath: 'polygon(0% 49.5%, 100% 49.5%, 100% 50.5%, 0% 50.5%)' }}
                 >
                     <Image
                         src={data.image.link}
