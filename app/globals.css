@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-secondary: #FF6900;
+  --font-outfit: var(--font-outfit);
+  --font-fira: var(--font-fira);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+@utility main-container {
+  @apply max-w-[1600px] overflow-hidden px-2 mx-auto;
+}
+
+body {
+  background: var(--foreground);
+  color: var(--background);
+  font-family: var(--font-fira), Helvetica, sans-serif;
+}
