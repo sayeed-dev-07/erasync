@@ -8,15 +8,12 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register ScrollTrigger alongside useGSAP
+
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Navbar = () => {
     const data = NavbarData;
     const [isOpen, setIsOpen] = useState(false);
-
-    // We use a ref to track isOpen inside the GSAP scroll callback
-    // without triggering a re-render of the timeline every click
     const isOpenRef = useRef(isOpen);
     useEffect(() => {
         isOpenRef.current = isOpen;
@@ -75,28 +72,26 @@ const Navbar = () => {
             paused: true,
             duration: 0.4,
             ease: "power3.out"
-        }).progress(1); // Set to finished state initially
+        }).progress(1);
 
         ScrollTrigger.create({
             start: "top top",
             end: "max",
             onUpdate: (self) => {
-                // If mobile menu is open, DO NOT hide the navbar
+
                 if (isOpenRef.current) return;
 
                 if (self.direction === -1) {
-                    // User scrolled UP -> Reveal Navbar
                     showAnim.play();
                 } else if (self.direction === 1 && self.scroll() > 100) {
-                    // User scrolled DOWN past 100px -> Hide Navbar
                     showAnim.reverse();
                 }
             }
         });
-    }); // No dependencies needed here, runs once on mount
+    });
 
     return (
-        // 👇 CHANGED: Added 'fixed top-0 left-0 w-full' here to make it hover over the Hero
+
         <div ref={containerRef} className="fixed top-0 left-0 w-full z-50 transition-colors bg-foreground duration-300 ">
 
             {/* Main Navbar Bar */}
@@ -135,10 +130,10 @@ const Navbar = () => {
                 </div>
             </div>
 
-            {/* Mobile Drawer... (unchanged) */}
+
             <div
                 ref={menuRef}
-                className="invisible fixed top-0 left-0 w-4/5 max-w-sm h-screen bg-foreground border-r border-background/20 shadow-2xl z-40 px-6 pt-24 pb-8 flex flex-col justify-between"
+                className="invisible fixed top-0 left-0 w-4/5 max-w-sm h-svh bg-foreground border-r border-background/20 shadow-2xl z-40 px-6 pt-24 pb-8 flex flex-col justify-between"
                 style={{ willChange: 'transform' }}
             >
                 <div className="flex flex-col gap-y-3 py-[5%]">
