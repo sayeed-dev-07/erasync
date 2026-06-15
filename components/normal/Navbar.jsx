@@ -95,7 +95,7 @@ const Navbar = () => {
         <div ref={containerRef} className="fixed top-0 left-0 w-full z-50 transition-colors bg-foreground duration-300 ">
 
             {/* Main Navbar Bar */}
-            <div className='flex items-center justify-between  text-background py-4 bg-foreground px-4 sm:px-6 relative z-50'>
+            <div className='flex items-center justify-between  text-background py-4 bg-foreground px-4  max-w-[1600px] mx-auto relative z-50'>
                 <Link href={'/'} className='block w-28 sm:w-36 md:w-40 aspect-3/1 relative select-none'>
                     <Image
                         src={data.logo.link}

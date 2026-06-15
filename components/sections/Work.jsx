@@ -84,8 +84,8 @@ const Works = () => {
 
     return (
 
-        <section ref={containerRef} id="works" className="relative w-full bg-foreground text-background pt-24 pb-32 sm:pt-32 sm:pb-40 px-4 sm:px-8 md:px-12 selection:bg-secondary selection:text-foreground">
-            <div className="w-full max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 relative ">
+        <section ref={containerRef} id="works" className="relative w-full bg-foreground text-background pt-24 pb-32 sm:pt-32 sm:pb-40  md:px-12 selection:bg-secondary selection:text-foreground">
+            <div className="w-full max-w-[1600px] px-4 mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 relative ">
 
                 {/* --- LEFT SIDE: Sticky  Column --- */}
                 <div className="hidden lg:block w-1.5/3 relative">

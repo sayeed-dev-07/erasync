@@ -67,8 +67,8 @@ const About = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} id="about" className="relative w-full bg-background text-foreground pt-24 pb-32 sm:pt-32 sm:pb-40 px-4 sm:px-8 md:px-12 selection:bg-secondary selection:text-white">
-            <div className="w-full max-w-[1600px] mx-auto flex flex-col gap-y-32 md:gap-y-48">
+        <section ref={containerRef} id="about" className="relative w-full bg-background text-foreground pt-24 pb-32 sm:pt-32 sm:pb-40  selection:bg-secondary selection:text-white">
+            <div className="w-full px-4 max-w-[1600px] mx-auto flex flex-col gap-y-32 md:gap-y-48">
 
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 relative">

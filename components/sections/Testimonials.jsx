@@ -30,8 +30,7 @@ const Testimonials = () => {
         gsap.to(trackRef.current, {
             x: -targetOffset,
             duration: 0.8,
-            ease: "power4.out",
-            overwrite: "auto"
+            ease: "power3",
         });
 
 
@@ -39,9 +38,8 @@ const Testimonials = () => {
         gsap.to('.progress-fill', {
             scaleX: progress,
             duration: 0.8,
-            ease: "power3.out",
+            ease: "power3",
             transformOrigin: "left center",
-            overwrite: "auto"
         });
 
     }, { scope: containerRef, dependencies: [currentIndex] });

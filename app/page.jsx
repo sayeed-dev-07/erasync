@@ -1,4 +1,5 @@
 import Navbar from '@/components/normal/Navbar';
+import Home from '@/components/preloader/ClientLayout';
 import About from '@/components/sections/About';
 import Hero from '@/components/sections/Hero';
 import Services from '@/components/sections/Services';
@@ -9,12 +10,7 @@ import React from 'react';
 const page = () => {
   return (
     <div>
-      <Navbar />
-      <Hero />
-      <About />
-      <Works />
-      <Services />
-      <Testimonials />
+      <Home />
     </div>
   );
 };
