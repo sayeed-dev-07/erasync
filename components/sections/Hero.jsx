@@ -87,7 +87,7 @@ const Hero = ({ startTimeline }) => {
                     duration: 1.1,
                     stagger: 0.12,
                     ease: 'expo.inOut',
-                })
+                }, '<')
                 .to(splitTop.chars, {
                     yPercent: 0,
                     rotateX: 0,
@@ -124,7 +124,7 @@ const Hero = ({ startTimeline }) => {
     return (
         <section
             ref={containerRef}
-            
+
             className="relative isolate flex min-h-[760px] w-full items-stretch overflow-hidden bg-[#efede7] pt-24 text-[#0a0a0a] selection:bg-secondary selection:text-white sm:min-h-[780px] lg:h-svh lg:min-h-[760px]"
         >
             <div className="relative z-10 mx-auto flex w-full max-w-[1600px] flex-col px-4 pb-6 sm:pb-8">

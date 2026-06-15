@@ -34,9 +34,9 @@ const Preloader = ({ onComplete }) => {
             ref={containerRef}
             className="pointer-events-none fixed inset-0 z-99999 grid grid-cols-3"
         >
-            <div className="loader-panel bg-[#0a0a0a]" />
-            <div className="loader-panel bg-[#0a0a0a]" />
-            <div className="loader-panel bg-[#0a0a0a]" />
+            <div className="loader-panel bg-secondary" />
+            <div className="loader-panel bg-secondary" />
+            <div className="loader-panel bg-secondary" />
         </div>
     );
 };

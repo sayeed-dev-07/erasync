@@ -57,10 +57,10 @@ const Testimonials = () => {
 
     return (
         <section ref={containerRef} id="testimonials" className="relative w-full bg-background text-foreground py-24 sm:py-32 overflow-hidden selection:bg-secondary selection:text-white">
-            <div className="w-full max-w-[1600px] mx-auto flex flex-col  gap-y-[5%]  relative px-4 sm:px-8 md:px-12">
+            <div className="w-full max-w-[1600px] mx-auto flex flex-col  gap-y-[5%]  relative px-4 ">
 
                 {/* --- LEFT SIDE --- */}
-                <div className="w-full    z-20">
+                <div className="w-full   z-20">
                     <div className="flex items-center gap-3 text-xs font-bold tracking-widest uppercase text-secondary mb-6">
                         <span className="w-2 h-2 rounded-sm bg-secondary outline outline-offset-2 outline-secondary/30"></span>
                         {data.label}

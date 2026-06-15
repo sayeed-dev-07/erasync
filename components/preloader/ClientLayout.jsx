@@ -8,6 +8,7 @@ import Works from '../sections/Work';
 import Navbar from '../normal/Navbar';
 import About from '../sections/About';
 import Testimonials from '../sections/Testimonials';
+import Contact from '../sections/Contact';
 
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 
     return (
         <main className="relative min-h-screen bg-[#efede7]">
-            
+
             <Preloader onComplete={() => setIntroFinished(true)} />
             <Navbar />
             <Hero startTimeline={introFinished} />
@@ -23,6 +24,7 @@ export default function Home() {
             <Works />
             <Services />
             <Testimonials />
+            <Contact />
         </main>
     );
 }

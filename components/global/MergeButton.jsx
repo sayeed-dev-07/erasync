@@ -22,7 +22,7 @@ const MergeButton = ({ text, link }) => {
             overwrite: "auto"
         });
 
-        
+
         gsap.to(pillRef.current, {
             borderTopRightRadius: 0,
             borderBottomRightRadius: 0,
@@ -31,7 +31,7 @@ const MergeButton = ({ text, link }) => {
             overwrite: "auto"
         });
 
-        
+
         gsap.to(circleRef.current, {
             borderTopLeftRadius: 0,
             borderBottomLeftRadius: 0,
@@ -40,7 +40,7 @@ const MergeButton = ({ text, link }) => {
             overwrite: "auto"
         });
 
-        
+
         gsap.to(iconRef.current, {
             x: 4,
             duration: 0.6,
@@ -50,7 +50,7 @@ const MergeButton = ({ text, link }) => {
     });
 
     const handleMouseLeave = contextSafe(() => {
-        
+
         gsap.to(containerRef.current, {
             gap: "0.5rem",
             duration: 0.5,
@@ -58,7 +58,7 @@ const MergeButton = ({ text, link }) => {
             overwrite: "auto"
         });
 
-        
+
         gsap.to(pillRef.current, {
             borderTopRightRadius: "9999px",
             borderBottomRightRadius: "9999px",
@@ -89,7 +89,7 @@ const MergeButton = ({ text, link }) => {
             ref={containerRef}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            
+            target='_blank'
             className="flex items-center gap-2 w-max cursor-pointer group"
         >
             {/* --- MAIN TEXT PILL --- */}
