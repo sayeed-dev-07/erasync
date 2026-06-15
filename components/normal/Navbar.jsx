@@ -7,11 +7,15 @@ import Navlink from '../global/Navlink';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useLenis } from 'lenis/react';
+import { usePathname } from 'next/navigation';
 
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Navbar = () => {
+    const lenis = useLenis();
+    const pathname = usePathname();
     const data = NavbarData;
     const [isOpen, setIsOpen] = useState(false);
     const isOpenRef = useRef(isOpen);
@@ -26,6 +30,19 @@ const Navbar = () => {
     const lineTop = useRef(null);
     const lineMiddle = useRef(null);
     const lineBottom = useRef(null);
+
+    const handleLogoClick = (e) => {
+        if (pathname === '/') {
+            e.preventDefault();
+
+            if (lenis) {
+                lenis.scrollTo(0);
+            } else {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+    };
 
     const toggleMenu = () => setIsOpen(prev => !prev);
 
@@ -96,7 +113,7 @@ const Navbar = () => {
 
             {/* Main Navbar Bar */}
             <div className='flex items-center justify-between  text-background py-4 bg-foreground px-4  max-w-[1600px] mx-auto relative z-50'>
-                <Link href={'/'} className='block w-28 sm:w-36 md:w-40 aspect-3/1 relative select-none'>
+                <Link onClick={handleLogoClick} href={'/'} className='block w-28 sm:w-36 md:w-40 aspect-3/1 relative '>
                     <Image
                         src={data.logo.link}
                         fill

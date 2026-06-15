@@ -30,7 +30,8 @@ const Testimonials = () => {
         gsap.to(trackRef.current, {
             x: -targetOffset,
             duration: 0.8,
-            ease: "power3",
+            ease: "power3.out",
+            overwrite: "auto"
         });
 
 
@@ -38,8 +39,9 @@ const Testimonials = () => {
         gsap.to('.progress-fill', {
             scaleX: progress,
             duration: 0.8,
-            ease: "power3",
+            ease: "power3.out",
             transformOrigin: "left center",
+            overwrite: "auto"
         });
 
     }, { scope: containerRef, dependencies: [currentIndex] });
@@ -75,7 +77,7 @@ const Testimonials = () => {
 
 
                     <div className="relative w-full h-[450px] sm:h-[550px]">
-                        <div ref={trackRef} className="flex gap-6 sm:gap-8 w-max absolute left-0 h-full items-center">
+                        <div ref={trackRef} className="flex gap-6 sm:gap-8 w-max absolute left-0 h-full will-change-transform items-center">
 
                             {data.testimonials.map((testimonial, index) => (
 
@@ -122,7 +124,7 @@ const Testimonials = () => {
 
                         {/* Progress Line */}
                         <div className="flex-1 mr-8 sm:mr-16 h-px bg-foreground/10 relative overflow-hidden">
-                            <div className="progress-fill absolute top-0 left-0 w-full h-full bg-secondary origin-left scale-x-0"></div>
+                            <div className="progress-fill will-change-transform absolute top-0 left-0 w-full h-full bg-secondary origin-left scale-x-0"></div>
                         </div>
 
                         {/* Navigation Arrows */}
@@ -131,7 +133,7 @@ const Testimonials = () => {
                                 onClick={handlePrev}
                                 disabled={currentIndex === 0}
                                 aria-label="Previous testimonial"
-                                className="w-12 h-12 cursor-pointer rounded-full border border-foreground/20 flex items-center justify-center transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background active:scale-90 disabled:opacity-30 disabled:pointer-events-none"
+                                className="w-12 h-12 cursor-pointer rounded-full border border-foreground/20 flex items-center justify-center transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background active:scale-90 disabled:opacity-30 disabled:cursor-not-allowed"
                             >
                                 <ChevronLeft className="w-5 h-5" />
                             </button>
@@ -139,7 +141,7 @@ const Testimonials = () => {
                                 onClick={handleNext}
                                 disabled={currentIndex === totalItems - 1}
                                 aria-label="Next testimonial"
-                                className="w-12 h-12 rounded-full border border-foreground/20 cursor-pointer flex items-center justify-center transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background active:scale-90 disabled:opacity-30 disabled:pointer-events-none"
+                                className="w-12 h-12 rounded-full border border-foreground/20 cursor-pointer flex items-center justify-center transition-all duration-300 hover:border-foreground hover:bg-foreground hover:text-background active:scale-90 disabled:opacity-30 disabled:cursor-not-allowed"
                             >
                                 <ChevronRight className="w-5 h-5" />
                             </button>

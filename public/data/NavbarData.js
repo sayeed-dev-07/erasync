@@ -17,8 +17,8 @@ export const NavbarData = {
             link: '#about'
         },
         {
-            text: 'Blog',
-            link: '#blog'
+            text: 'Testimonials',
+            link: '#testimonials'
         },
         {
             text: 'Contact',
